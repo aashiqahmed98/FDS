@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgGridModule.withComponents([]),
+    // /The withComponents call is necessary for the grid to be able to use Angular components as cells / headers - you can ignore it for now.
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
