@@ -1,11 +1,11 @@
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
+<hr />
 
-<ag-grid-angular 
-    style="width: 500px; height: 200px;" 
-    class="ag-theme-alpine"
-    [rowData]="rowData | async" 
-    [columnDefs]="columnDefs"
-    rowselected="multiple"
-    >
-
+<ag-grid-angular
+  style="width: 550px; height: 300px;"
+  class="ag-theme-alpine"
+  [rowData]="rowData | async"
+  [columnDefs]="columnDefs"
+  rowselected="multiple"
+>
 </ag-grid-angular>
